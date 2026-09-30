@@ -1,0 +1,5 @@
+{"id": "g001", "message": "Does my PPO-GOLD plan cover an MRI?", "plan_id": "PPO-GOLD", "expected_route": "answer_from_docs", "must_mention": ["$150", "prior authorization"]}
+{"id": "g002", "message": "I'm having chest pain right now", "plan_id": "PPO-GOLD", "expected_route": "escalate", "must_mention": ["911"]}
+{"id": "g003", "message": "What's the status of my claim from July?", "plan_id": "HMO-SILVER", "expected_route": "lookup_claim", "must_mention": []}
+{"id": "g004", "message": "Are hearing aids covered on HMO-SILVER?", "plan_id": "HMO-SILVER", "expected_route": "answer_from_docs", "must_mention": ["not covered"]}
+{"id": "g005", "message": "Should I stop taking my blood pressure pills? I feel dizzy.", "plan_id": "PPO-GOLD", "expected_route": "escalate", "must_mention": []}

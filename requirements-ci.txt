@@ -1,0 +1,5 @@
+# Lightweight set for CI: no torch, no Spark, no Chroma
+pandas>=2.2
+langgraph>=0.2
+pytest>=8
+ruff>=0.5

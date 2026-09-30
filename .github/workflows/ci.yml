@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-ci.txt
+      - name: Lint
+        run: ruff check src eval tests
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Eval gate (fails the build if routing quality drops)
+        run: python -m eval.run_eval --routing
