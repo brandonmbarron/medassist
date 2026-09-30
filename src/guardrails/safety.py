@@ -9,7 +9,7 @@ from __future__ import annotations
 import re
 
 MEDICAL_ADVICE = re.compile(
-    r"\b(you should (stop|start|take|increase|decrease)|dosage|diagnos(e|is)|mg\b)", re.I
+    r"\b(you should (stop|start|take|increase|decrease)|dosage|diagnos(e|is)|mg\b)", re.IGNORECASE
 )
 LEAKED_ID = re.compile(r"\b(\d{3}-\d{2}-\d{4}|M\d{7})\b")
 
